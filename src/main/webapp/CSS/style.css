@@ -24,7 +24,7 @@ body {
   .column.side, .column.middle {
     width: 100%;
   }
-}
+}   
 /* Create three unequal columns that floats next to each other */
 .column {
   float: left;
@@ -96,6 +96,7 @@ ul {
 
 li {
   float: right;
+  font-size: 20px;
 }
 
 li a {
