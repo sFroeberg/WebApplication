@@ -13,21 +13,18 @@ body {
 
 /* Style the header */
 .header {
-  background-color: #f1f1f1;
+  background-color: white;
   padding: 30px;
   text-align: left;
   font-size: 35px;
   
 }
 
-img {
-    height: 100px;
-    width: 100px;
-    float: left;
+@media (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
 }
-
-
-
 /* Create three unequal columns that floats next to each other */
 .column {
   float: left;
@@ -64,7 +61,7 @@ form.example button {
   float: left;
   width: 20%;
   padding: 10px;
-  background: #2196F3;
+  background: darkgray;
   color: white;
   font-size: 17px;
   border: 1px solid grey;
@@ -73,7 +70,7 @@ form.example button {
 }
 
 form.example button:hover {
-  background: #0b7dda;
+  background: lightgray;
 }
 
 /* Clear floats */
@@ -88,25 +85,38 @@ form.example::after {
   display: table;
   clear: both;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 
-/* Style the footer */
-.footer {
-  background-color: #f1f1f1;
-  padding: 10px;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
 }
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 
 div.scrollmenu {
   background-color: #f1f1f1;
   overflow: auto;
   white-space: nowrap;
+  padding:15px;
 }
 
 div.scrollmenu a {
@@ -119,4 +129,10 @@ div.scrollmenu a {
 
 div.scrollmenu a:hover {
   background-color: #777;
+}
+
+.footer {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
 }
