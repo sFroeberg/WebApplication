@@ -65,3 +65,21 @@ img {
     width: 100%;
   }
 }
+
+div.scrollmenu {
+  background-color: #f1f1f1;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
