@@ -16,10 +16,6 @@ public class JdbcTest {
      */
     public static void main(String[] args) {
         
-        JdbcCon db = new JdbcCon();
-        
-        db.openConnection();
-        
         ActorExtraction ae = new ActorExtraction();
         
         ae.actorExt();

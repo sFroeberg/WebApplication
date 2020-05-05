@@ -27,16 +27,16 @@ private String actor;
         try{
             
             Connection conn=JdbcCon.openConnection();
-            PreparedStatement ps=conn.prepareStatement("SELECT * FROM actor;");
+            PreparedStatement ps=conn.prepareStatement("SELECT * FROM bild;");
             
             ResultSet rs = ps.executeQuery();
             
             ArrayList<String> array = new ArrayList<String>();
             
             while(rs.next()){
-                System.out.println(rs.getString("first_name"));
+                System.out.println(rs.getString("filNamn"));
                 
-                array.add(rs.getString("first_name"));
+                array.add(rs.getString("filNamn"));
             }
             
             

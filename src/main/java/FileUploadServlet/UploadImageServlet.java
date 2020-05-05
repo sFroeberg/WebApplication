@@ -19,11 +19,21 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.annotation.MultipartConfig;
 
 /**
  *
  * @author Joel
  */
+
+@WebServlet("/UploadImageServlet")
+@MultipartConfig(
+        fileSizeThreshold   = 1024 * 1024 * 2,  // 1 MB
+        maxFileSize         = 1024 * 1024 * 10, // 10 MB
+        maxRequestSize      = 1024 * 1024 * 50) // 50 MB
+
+
 public class UploadImageServlet extends HttpServlet {
 
     /**
@@ -87,7 +97,7 @@ public class UploadImageServlet extends HttpServlet {
         
         Part part = request.getPart("file");
         String fileName = extractFileName(part);
-        String savePath = "D:\\Javaprojekt\\WebApplication\\web\\images\\" + File.separator + fileName;
+        String savePath = "D:\\Javaprojekt\\WebApplication\\src\\main\\webapp\\images" + File.separator + fileName;
         File fileSaveDir = new File (savePath);
         
         /*Om flera filer har samma namn går det att lägga till siffror efter namnet*/
@@ -101,12 +111,14 @@ public class UploadImageServlet extends HttpServlet {
             
            Connection con=JdbcCon.openConnection();
            PreparedStatement pst = con.prepareStatement("insert into bild values(?, ?, ?, ?, ?, ?, ?)");
+           pst.setInt(1, id);
            pst.setString(2, cathegory);
            pst.setString(4, description);
            pst.setString(7, fileName);
            pst.setString(6, savePath);
            pst.executeUpdate();
            out.println("<center><h1>Bilden är uppladddad!</h1></center>");
+           out.println("<center><h1>a href='display.jsp?id=" + id + "'</h1></center>");
            
            
         } catch (Exception e){
