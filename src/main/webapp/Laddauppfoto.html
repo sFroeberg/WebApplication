@@ -24,8 +24,39 @@
 
         <div class="row">
         <div class="column side" style="background-color:white;"></div>
-        <div class="column middle" style="background-color:gray;">Column
-          
+        <div class="column middle" style="background-color:gray;">
+            <form action="FileUploadServlet" method="post" enctype="multipart/form-data">
+                <table width="400px" align="center" border="2">
+                    <tr>
+                        <td align="center" colspan="2">Ladda upp en bild</td>      
+                    </tr> 
+                    <tr>
+                        <td>Ladda upp bild:</td>
+                        <td>
+                    <input type="file" name="file">
+                        </td>      
+                    </tr>
+                    <tr>
+                        <td>Vilken kategori tillhör bilden</td>
+                        <td>
+                            <input type="text" name="kategori">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Beskriv bilden med en fritext</td>
+                        <td>
+                            <input type="text" name="fritext">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" name="Submit">
+                        </td>
+                    </tr>
+                    
+                </table>   
+            </form>
         
         </div>
         </div>

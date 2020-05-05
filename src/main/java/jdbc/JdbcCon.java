@@ -27,7 +27,7 @@ public class JdbcCon {
             
             try {
             // db parameters
-            String url       = "jdbc:mysql://localhost:3306/sakila?useTimezone=true&serverTimezone=UTC";
+            String url       = "jdbc:mysql://localhost:3306/bothniabladet?useTimezone=true&serverTimezone=UTC";
             String user      = "root";
             String password  = "";
 
