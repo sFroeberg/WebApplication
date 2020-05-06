@@ -4,9 +4,17 @@
         <servlet-name>LaddaUppBildServlet</servlet-name>
         <servlet-class>servlet.LaddaUppBildServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>viewbild</servlet-name>
+        <servlet-class>viewbild</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LaddaUppBildServlet</servlet-name>
         <url-pattern>/LaddaUppBildServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewbild</servlet-name>
+        <url-pattern>/viewbild</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
