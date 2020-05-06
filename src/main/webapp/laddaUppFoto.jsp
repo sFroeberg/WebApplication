@@ -1,13 +1,8 @@
 <%-- 
-    Document   : LaddaUppJSP
-    Created on : 2020-maj-05, 13:01:22
+    Document   : LaddaUppFoto
+    Created on : 2020-maj-06, 09:05:18
     Author     : Joel
 --%>
-
-<%@page import="java.util.Set"%>
-<%@page import="java.util.HashSet"%>
-<%@page import="java.util.Random"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
@@ -28,7 +23,7 @@
             <li><a href="LoggaIn.html">Logga in</a></li>
             <li><a href="Laddauppfoto.html">Ladda upp foto</a></li>
             <li><a href="nyabilder.html">Nya bilder</a></li>
-            <li><a href="bildsok.html">BildsÃ¶k</a></li>
+            <li><a href="bildsok.html">Bildsök</a></li>
         </ul>
         <hr>
         </div>
@@ -36,39 +31,27 @@
         <div class="row">
         <div class="column side" style="background-color:white;"></div>
         <div class="column middle" style="background-color:gray;">
-            <form action="UploadImageServlet" method="post" enctype="multipart/form-data">
-                <table width="400px" align="center" border="2">
+            <form method="post" action="laddaUppServlet" enctype="multipart/form-data">
+                <table border="0"> 
                     <tr>
-                        <td align="center" colspan="2">Ladda upp en bild</td>      
-                    </tr> 
-                    <tr>
-                        <td>Ladda upp bild:</td>
-                        <td>
-                    <input type="file" name="file">
-                        </td>      
+                        <td>Välj bild: </td>
+                        <td><input type="file" name="foto" size="50"/></td>
                     </tr>
                     <tr>
-                        <td>Vilken kategori tillhÃ¶r bilden</td>
-                        <td>
-                            <input type="text" name="kategori">
+                        <td>Kategori: </td>
+                        <td><input type="text" name="kategori" size="50"/></td>
+                    </tr>
+                    <tr>
+                        <td>Beskrivning: </td>
+                        <td><input type="text" name="beskrivning" size="50"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Save">
                         </td>
                     </tr>
-                    <tr>
-                        <td>Beskriv bilden med en fritext</td>
-                        <td>
-                            <input type="text" name="fritext">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <input type="submit" name="Submit">
-                        </td>
-                    </tr>
-                    
-                </table>   
+                </table>
             </form>
-        
         </div>
         </div>
 
