@@ -8,6 +8,14 @@
         <servlet-name>viewbild</servlet-name>
         <servlet-class>viewbild</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>sokBild</servlet-name>
+        <servlet-class>sok.BildVisarController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BildDownloader</servlet-name>
+        <servlet-class>sok.BildDownloader</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LaddaUppBildServlet</servlet-name>
         <url-pattern>/LaddaUppBildServlet</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>viewbild</servlet-name>
         <url-pattern>/viewbild</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sokBild</servlet-name>
+        <url-pattern>/sokBild</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BildDownloader</servlet-name>
+        <url-pattern>/BildDownloader</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

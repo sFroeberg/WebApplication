@@ -1,9 +1,15 @@
 package servlet;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Base64;
+import javax.imageio.ImageIO;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,11 +47,34 @@ public class SokBildServlet extends HttpServlet {
             ResultSet rs = st.executeQuery(query);
  
             while (rs.next()) {
+                
+                Blob blob = rs.getBlob("bildfil");
+                
+                InputStream inputStream = blob.getBinaryStream();
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                byte[] buffer = new byte[4096];
+                int bytesRead = -1;
+                
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);                  
+                }
+                 
+                byte[] imageBytes = outputStream.toByteArray();
+                String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+                 
+                 
+                inputStream.close();
+                outputStream.close();
+                
+                //BufferedImage img = ImageIO.read(new ByteArrayInputStream(imageBytes));
+                //ev lösning?
+                
                 al = new ArrayList();
  
                 
                 //Blob blob = rs.getBlob("image");
-                al.add(rs.getBlob(1));
+                //al.add(rs.getBlob(1));
+                al.add(base64Image);
  
                 System.out.println("al :: " + al);
                 pid_list.add(al);

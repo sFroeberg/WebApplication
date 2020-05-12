@@ -22,8 +22,8 @@
             </tr>
             <tr style="background-color:lightgrey;">
                 <td><b>Bilder</b></td>
-
             </tr>
+                 
             <%
                 int count = 0;
                 String color = "#F9EBB3";
@@ -38,6 +38,11 @@
                         }
                         count++;
                         ArrayList pList = (ArrayList) itr.next();
+                        
+            %>
+                        <img src="data:image/jpg;base64,${pList}" width="240" height="300"/>  
+            <%
+
             %>
             <tr style="background-color:<%=color%>;">
                 <td><%=pList.get(0)%></td>

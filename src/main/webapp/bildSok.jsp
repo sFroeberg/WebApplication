@@ -34,7 +34,7 @@
         <div class="column middle" style="background-color:gray;">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-            <form method="post" name="sokServlet" action="sokServlet" style="margin:auto;max-width:300px;">
+            <form method="post" name="sokResultat2" action="sokResultat2.jsp" style="margin:auto;max-width:300px;">
             <input type="text" placeholder="Sök efter bild" name="kategori" id="kategori">
             <button type="submit" name="submit" value="Search"><i class="fa fa-search"></i></button>
             </form>
