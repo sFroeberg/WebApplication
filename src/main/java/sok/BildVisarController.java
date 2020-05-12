@@ -31,7 +31,7 @@ public class BildVisarController extends HttpServlet {
         List<BildDTO> lista = bildDao.getData();
         
         request.setAttribute("lista", lista);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("sokResultat3.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("sokResultat.jsp");
         dispatcher.forward(request, response);
         
         }
