@@ -29,7 +29,6 @@ public class BildDownload extends HttpServlet {
         BildDAO dao = null;
         ServletOutputStream outputStream = null;
         String id = request.getParameter("bildID");
-        //String id = "5";
         System.out.println("här bör det finnas bildID:" + id);
         dao = new BildDAO();
         byte[] bild = dao.getBild(id);

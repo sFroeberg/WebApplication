@@ -16,6 +16,10 @@
         <servlet-name>BildDownloader</servlet-name>
         <servlet-class>sok.BildDownloader</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BildNedladdning</servlet-name>
+        <servlet-class>sok.BildNedladdning</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LaddaUppBildServlet</servlet-name>
         <url-pattern>/LaddaUppBildServlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>BildDownloader</servlet-name>
         <url-pattern>/BildDownloader</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BildNedladdning</servlet-name>
+        <url-pattern>/BildNedladdning</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
