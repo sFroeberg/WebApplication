@@ -36,8 +36,8 @@ public class BildVisarController extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String kategori = request.getParameter("kategori");
-        String GET_DATA = "SELECT bildID, kategori FROM bild WHERE kategori = ?";
+        String sokfras = request.getParameter("sokfras");
+        String GET_DATA = "SELECT bildID, kategori FROM bild WHERE beskrivning LIKE ? OR kategori LIKE ?";
         
         Connection con = null;
         PreparedStatement ps = null;
@@ -52,7 +52,8 @@ public class BildVisarController extends HttpServlet {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             con = JdbcCon.openConnection();
             ps = con.prepareStatement(GET_DATA);
-            ps.setString(1, kategori);
+            ps.setString(1, "%" + sokfras + "%");
+            ps.setString(2, "%" + sokfras + "%");
             rs = ps.executeQuery();
             
             while(rs.next()){

@@ -35,7 +35,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
             <form method="post" name="BildVisarController" action="BildVisarController" style="margin:auto;max-width:300px;">
-            <input type="text" placeholder="Sök efter bild" name="kategori" id="kategori">
+            <input type="text" placeholder="Sök efter bild" name="sokfras">
             <button type="submit" name="submit" value="Search"><i class="fa fa-search"></i></button>
             </form>
         
