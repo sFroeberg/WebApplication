@@ -49,7 +49,9 @@
         String bildID = dto.getBildID();
         String kategori = dto.getKategori();
         %>
-        <div class imgdisplay><img src ="./BildDownload?bildID=<%=bildID%>" height="150"/> </div>     
+        <div class="imgdisplay">
+            <img src ="./BildDownload?bildID=<%=bildID%>" style="width:100%"> 
+        </div>       
         <%}
         %>
         
