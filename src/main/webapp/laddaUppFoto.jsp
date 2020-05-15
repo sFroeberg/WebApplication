@@ -24,6 +24,9 @@
             <li><a href="laddaUppFoto.jsp">Ladda upp foto</a></li>
             <li><a href="BildDatumController">Nya bilder</a></li>
             <li><a href="bildSok.jsp">Bildsök</a></li>
+            <li><a href="Laddauppfoto.html">Ladda upp foto</a></li>
+            <li><a href="nyabilder.html">Nya bilder</a></li>
+            <li><a href="bildsok.html">Bildsök</a></li>
         </ul>
         <hr>
         </div>
