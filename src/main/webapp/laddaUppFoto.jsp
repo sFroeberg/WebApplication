@@ -35,20 +35,26 @@
                 <hr>
             </div>
 
-        <div class="rowladdaupp">
-            <div class="columnladdaupp" style="background-color:white">
+         <div class="rowladdaupp" >
+            <div class="columnladdaupp"  >
             <h1 style="text-align: center;"> Ladda upp foto </h1> <br>
 
-                <form method="post" action="laddaUppServlet" enctype="multipart/form-data">
+                <form method="post" action="laddaUppServlet" enctype="multipart/form-data"  >
 
-                        <h2 style="text-align: center;">Välj bild</h2><br>
-                        <input type="file" name="foto" size="50" /> <br> <br> <br>
+                       
                         <h4 style="text-align: center;">Skriv en text som beskriver bilden</h4>
-                        <textarea placeholder="Beskrivning av bild här" name="beskrivning" rows ="6" cols="50" ></textarea> 
-                        <br><br><br>
+                        <textarea placeholder="Beskrivning av bild här" name="beskrivning" rows ="6" cols="39" ></textarea> 
+                        <br><br>
                         <h3 >Taggar</h3>
+                        <select name="Taggar"> 
+                            <option value="Systemvetenskap">Natur</option>
+                            <option value="DownSyndrombarn">Sport</option>
+                            <option value="Nakenhet">Bak</option>
+                            <option value="Natur">Katter</option>
+                            <option value="Jörgen">Hundar</option>
+                        </select>
                         <input placeholder="sport,natur,kanot"type="text" name="kategori" size="50" /> 
-
+                        <input type="file" name="foto" size="50" /> <br><br>
                         <input type="submit" value="Ladda Upp">
                         
 
