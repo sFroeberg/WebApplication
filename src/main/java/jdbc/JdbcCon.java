@@ -27,9 +27,16 @@ public class JdbcCon {
             
             try {
             // db parameters
+            
+            /*String url       = "jdbc:mysql://localhost:3306/bothniabladet?useTimezone=true&serverTimezone=UTC";
+            String user      = "root";
+            String password  = "";*/
+            
+            
+            
             String url       = "jdbc:mysql://localhost:3306/bothniabladet?useTimezone=true&serverTimezone=UTC";
             String user      = "root";
-            String password  = "localhost123";
+            String password  = "";
 
             // create a connection to the database
             conn = DriverManager.getConnection(url, user, password);
