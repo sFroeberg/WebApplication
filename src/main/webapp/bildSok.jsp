@@ -31,17 +31,6 @@
                 <hr>
             </div>
 
-            <div class="row">
-                <div class="column side" style="background-color:white;">
-                    <h1>kategorier</h1> <br>
-                    <a  href="#sport">Sport</a> <br> <br>
-                    <a  href="#sport">Kajakklubben</a><br><br>
-                    <a  href="#sport">Natur</a><br><br>
-                    <a  href="#sport">Nakenhet</a><br><br>
-                    <a  href="#sport">Barn</a><br><br>
-                    <a  href="#sport">Pappor</a><br><br>
-                </div>
-
                 <div class="columnmiddlebildsok" style="background-color: white;">
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                     <div class="searchbutton"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  

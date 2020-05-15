@@ -1,9 +1,3 @@
-<%-- 
-    Document   : sokResultat
-    Created on : 2020-maj-12, 08:35:46
-    Author     : Joel
---%>
-
 <%@page import="sok.BildDTO"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
@@ -20,17 +14,30 @@
     <body>
             
         <div class="header">
-            <a href="index.html">
-            <img src="https://static.vecteezy.com/system/resources/previews/000/485/719/non_2x/vector-newspaper-line-black-icon.jpg" alt="News" style="float:left;width:100px;height:100px;">
-            </a>
-            <h2>Bothniabladet</h2>
+        <a href="index.html">
+        <img src="https://static.vecteezy.com/system/resources/previews/000/485/719/non_2x/vector-newspaper-line-black-icon.jpg" alt="News" style="float:left;width:100px;height:100px;">
+        </a>
+        <h2>Bothniabladet</h2>
         <ul>
             <li><a href="laddaUppFoto.jsp">Ladda upp foto</a></li>
             <li><a href="BildDatumController">Nya bilder</a></li>
             <li><a href="BildKategoriController">Kategorier</a></li>
             <li><a href="bildSok.jsp">Bildsök</a></li>
+
         </ul>
         <hr>
+        </div>
+        
+        <div class="row">
+        <div class="column side" style="background-color:white;">
+            <h1>kategorier</h1> <br>
+            <a  href="#sport">Sport</a> <br> <br>
+            <a  href="#sport">Kajakklubben</a><br><br>
+            <a  href="#sport">Natur</a><br><br>
+            <a  href="#sport">Nakenhet</a><br><br>
+            <a  href="#sport">Barn</a><br><br>
+            <a  href="#sport">Pappor</a><br><br>
+        </div>
         </div>
 
         <div class="row">
@@ -51,14 +58,15 @@
         %>
         <div class="imgdisplay">
             <img src ="./BildDownload?bildID=<%=bildID%>" style="width:100%"> 
-        </div>       
+        </div> 
         <%}
         %>
         
         </div>
-        
+
+        </div>  
         </div>
-        </div>
+
 
         <div class="footer">
             <hr>

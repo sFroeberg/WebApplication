@@ -25,9 +25,9 @@
         </a>
         <h2>Bothniabladet</h2>
         <ul>
-            <li><a href="LoggaIn.html">Logga in</a></li>
             <li><a href="laddaUppFoto.jsp">Ladda upp foto</a></li>
             <li><a href="BildDatumController">Nya bilder</a></li>
+            <li><a href="BildKategoriController">Kategorier</a></li>
             <li><a href="bildSok.jsp">Bildsök</a></li>
         </ul>
         <hr>
@@ -49,7 +49,9 @@
         String bildID = dto.getBildID();
         String kategori = dto.getKategori();
         %>
-        <div class imgdisplay><img src ="./BildDownload?bildID=<%=bildID%>" height="150"/> </div>     
+        <div class="imgdisplay">
+            <img src ="./BildDownload?bildID=<%=bildID%>" style="width:100%"> 
+        </div>     
         <%}
         %>
         
