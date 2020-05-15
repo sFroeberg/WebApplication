@@ -15,40 +15,81 @@
     </head>
     <body>
             
-        <div class="header">
-        <a href="index.html">
-            <img src="https://static.vecteezy.com/system/resources/previews/000/485/719/non_2x/vector-newspaper-line-black-icon.jpg" alt="News" style="float:left;width:100px;height:100px;">
-        </a>
-        <h2>Bothniabladet</h2>
-        <ul>
-            <li><a href="LoggaIn.html">Logga in</a></li>
-            <li><a href="laddaUppFoto.jsp">Ladda upp foto</a></li>
-            <li><a href="BildDatumController">Nya bilder</a></li>
-            <li><a href="bildSok.jsp">Bildsök</a></li>
-        </ul>
-        <hr>
-        </div>
+        <main>
+            <div class="header">
+                <a href="index.html">
 
-        <div class="row">
-        <div class="column side" style="background-color:white;"></div>
-        <div class="column middle" style="background-color:gray;">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-            <form method="post" name="BildVisarController" action="BildVisarController" style="margin:auto;max-width:300px;">
-            <input type="text" placeholder="Sök efter bild" name="sokfras">
-            <button type="submit" name="submit" value="Search"><i class="fa fa-search"></i></button>
-            </form>
-        
-        </div>
-        </div>
-
-        <div class="footer">
-            <hr>
-            <div class="scrollmenu">
-                <a href="#kontakt">Kontakt</a>
-                <a href="#omoss">Om oss</a>
-                <a href="#priser">Priser</a>
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/485/719/non_2x/vector-newspaper-line-black-icon.jpg" alt="News" style="float:left;width:100px;height:100px;" id=logga>
+                </a>
+                <h2 id=hightlight>Bothniabladet</h2>
+                <ul>
+                    <li><a href="laddaUppFoto.jsp">Ladda upp foto</a></li>
+                    <li><a href="BildDatumController">Nya bilder</a></li>
+                    <li><a href="BildKategoriController">Kategorier</a></li>
+                    <li><a href="bildSok.jsp">Bildsök</a></li>
+                </ul>
+                <hr>
             </div>
-        </div>
-    </body>
+
+                <div class="row">
+            <div class="column side" style="background-color:white;">
+                <h1>kategorier</h1> <br>
+                <a  href="#sport">Sport</a> <br> <br>
+                <a  href="#sport">Kajakklubben</a><br><br>
+                <a  href="#sport">Natur</a><br><br>
+                <a  href="#sport">Nakenhet</a><br><br>
+                <a  href="#sport">Barn</a><br><br>
+                <a  href="#sport">Pappor</a><br><br>
+            </div>
+     
+            <div class="columnmiddlebildsok" style="background-color: white;">
+               
+               
+                     <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+                    <form class="button" method="post" name="sokServlet" action="sokServlet"
+                        style="margin:auto;max-width:300px;">
+                        <input type="text" placeholder="Sök efter bild" name="kategori" id="kategori">
+                        <button type="submit" name="submit" value="Search"><i class="fa fa-search"></i></button>
+                    </form>
+                     
+            </div>
+                  
+        <footer>
+            <!-- innehåller footern med alla dess länkar och ikoner -->
+            <div class="footer-left">
+                <h3> Om Bothniabladet</h3>
+                <div class="footer-links">
+                    <!--Vänstra delen av footern, innehåller -->
+                    <a  id="links" href="index.html">Hem</a>
+                    |
+                    <a  id="links" href="Bildsök">Bildsök</a>
+                    |
+                    <a id="links"  href="#nyabilder">Nyabilder</a>
+
+
+                </div>
+
+            </div>
+
+            <div class="footer-center">
+                <strong> Kontakta oss</strong> <!-- mitten delen av footern-->
+                <div class="kontaktuppgifter">
+                    <p><a href="mailto:expedition@bothniabladet.se"> Bothniabladet@email.se</a><br>
+                        Telefon: 091501151 </p>
+
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <!--Högra delen av footern -->
+                <strong> Sociala medier </strong>
+                <div class="ikoner">
+                    <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </footer>
 </html>
