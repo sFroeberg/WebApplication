@@ -30,7 +30,6 @@ public class LaddaUppBildServlet extends HttpServlet {
         // gets values of text fields
         String kategori = request.getParameter("kategori");
         String beskrivning = request.getParameter("beskrivning");
-        String filtyp = request.getParameter("filtyp");
          
         InputStream inputStream = null; // input stream of the upload file
          
@@ -45,11 +44,6 @@ public class LaddaUppBildServlet extends HttpServlet {
             // obtains input stream of the upload file
             inputStream = filePart.getInputStream();
         }
-        
-        String dot = ".";
-        String obj = filePart.toString();
-        filtyp = obj.substring(obj.indexOf(dot), obj.indexOf(dot)+4);
-        
          
         Connection conn = null; // connection to the database
         String message = null;  // message will be sent back to client
@@ -63,11 +57,10 @@ public class LaddaUppBildServlet extends HttpServlet {
             
  
             // constructs SQL statement
-            String sql = "INSERT INTO bild (kategori, beskrivning, bildfil, filtyp) values (?, ?, ?, ?)";
+            String sql = "INSERT INTO bild (kategori, beskrivning, bildfil) values (?, ?, ?)";
             PreparedStatement statement = conn.prepareStatement(sql);
             statement.setString(1, kategori);
             statement.setString(2, beskrivning);
-            statement.setString(4, filtyp);
              
             if (inputStream != null) {
                 // fetches input stream of the upload file for the blob column
