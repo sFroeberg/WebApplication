@@ -27,7 +27,7 @@
         <ul>
             <li><a href="LoggaIn.html">Logga in</a></li>
             <li><a href="laddaUppFoto.jsp">Ladda upp foto</a></li>
-            <li><a href="nyabilder.html">Nya bilder</a></li>
+            <li><a href="BildDatumController">Nya bilder</a></li>
             <li><a href="bildSok.jsp">Bildsök</a></li>
         </ul>
         <hr>
@@ -36,7 +36,7 @@
         <div class="row">
         <div class="column side" style="background-color:white;"></div>
         <div class="column middle" style="background-color:gray;">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <%
           List<BildDTO> lista = (ArrayList<BildDTO>)request.getAttribute("lista");

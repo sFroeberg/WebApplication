@@ -1,14 +1,18 @@
 <%-- 
-    Document   : bildSok
-    Created on : 2020-maj-06, 11:11:08
+    Document   : nyabilder
+    Created on : 2020-maj-14, 10:03:25
     Author     : Joel
 --%>
 
+<%@page import="sok.BildDTO"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Start Page</title>
+        <title>Bothniabladet</title>
         <link rel="stylesheet" href="./CSS/style.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,12 +36,24 @@
         <div class="row">
         <div class="column side" style="background-color:white;"></div>
         <div class="column middle" style="background-color:gray;">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-            <form method="post" name="BildVisarController" action="BildVisarController" style="margin:auto;max-width:300px;">
-            <input type="text" placeholder="Sök efter bild" name="sokfras">
-            <button type="submit" name="submit" value="Search"><i class="fa fa-search"></i></button>
-            </form>
+        <%
+          List<BildDTO> lista = (ArrayList<BildDTO>)request.getAttribute("lista");
+        %>
+        
+        <div class="picturerow">
+        <%
+        for(int i = 0; i<lista.size(); i++){
+        BildDTO dto = lista.get(i);
+        String bildID = dto.getBildID();
+        String kategori = dto.getKategori();
+        %>
+        <div class imgdisplay><img src ="./BildDownload?bildID=<%=bildID%>" height="150"/> </div>     
+        <%}
+        %>
+        
+        </div>
         
         </div>
         </div>
