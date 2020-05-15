@@ -47,11 +47,11 @@
                         <br><br>
                         <h3 >Taggar</h3>
                         <select name="Taggar"> 
-                            <option value="Systemvetenskap">Natur</option>
-                            <option value="DownSyndrombarn">Sport</option>
-                            <option value="Nakenhet">Bak</option>
-                            <option value="Natur">Katter</option>
-                            <option value="Jörgen">Hundar</option>
+                            <option value="Natur">Natur</option>
+                            <option value="Sport">Sport</option>
+                            <option value="Bak">Bak</option>
+                            <option value="Katter">Katter</option>
+                            <option value="Hundar">Hundar</option>
                         </select>
                         <input placeholder="sport,natur,kanot"type="text" name="kategori" size="50" /> 
                         <input type="file" name="foto" size="50" /> <br><br>
