@@ -10,7 +10,9 @@
 
 <head>
     <title>Start Page</title>
-    <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="CSS/style.css" rel="stylesheet" type="text/css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,20 +20,20 @@
 
 <body>
     <main>
-        <div class="header">
-            <a href="index.html">
-                <img src="https://static.vecteezy.com/system/resources/previews/000/485/719/non_2x/vector-newspaper-line-black-icon.jpg"
-                    alt="News" style="float:left;width:100px;height:100px;">
-            </a>
-            <h2>Bothniabladet</h2>
-            <ul>
-                <li><a href="LoggaIn.html">Logga in</a></li>
-                <li><a href="laddaUppFoto.jsp">Ladda upp foto</a></li>
-                <li><a href="nyabilder.jsp">Nya bilder</a></li>
-                <li><a href="bildSok.jsp">Bildsök</a></li>
-            </ul>
-            <hr>
-        </div>
+                   <div class="header">
+                <a href="index.html">
+
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/485/719/non_2x/vector-newspaper-line-black-icon.jpg" alt="News" style="float:left;width:100px;height:100px;" id=logga>
+                </a>
+                <h2 id=hightlight>Bothniabladet</h2>
+                <ul>
+                    <li><a href="laddaUppFoto.jsp">Ladda upp foto</a></li>
+                    <li><a href="BildDatumController">Nya bilder</a></li>
+                    <li><a href="BildKategoriController">Kategorier</a></li>
+                    <li><a href="bildSok.jsp">Bildsök</a></li>
+                </ul>
+                <hr>
+            </div>
 
         <div class="rowladdaupp">
             <div class="columnladdaupp" style="background-color:white">
