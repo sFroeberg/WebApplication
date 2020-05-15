@@ -35,7 +35,13 @@ public class BildKategoriController extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String GET_DATA = "SELECT bildID, kategori FROM bild LIMIT 10;";
+        String sokfras = request.getParameter("sokfras");
+        String GET_DATA = "SELECT bildID, kategori FROM bild WHERE kategori LIKE ?";
+        
+       if(sokfras == null){
+            sokfras = "";
+            System.out.println("sökfras är null");
+       }
         
         Connection con = null;
         PreparedStatement ps = null;
@@ -50,6 +56,7 @@ public class BildKategoriController extends HttpServlet {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             con = JdbcCon.openConnection();
             ps = con.prepareStatement(GET_DATA);
+            ps.setString(1, "%" + sokfras + "%");
             rs = ps.executeQuery();
             
             while(rs.next()){
