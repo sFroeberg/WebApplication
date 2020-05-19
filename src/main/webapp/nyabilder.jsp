@@ -42,26 +42,30 @@
                   List<BildDTO> lista = (ArrayList<BildDTO>)request.getAttribute("lista");
                 %>
 
-                <div class="picturerow">
-                    <%
-                        for(int i = 0; i<lista.size(); i++){
-                        BildDTO dto = lista.get(i);
-                        String bildID = dto.getBildID();
-                        String kategori = dto.getKategori();
-                        if(i%4 == 0){
-                    %>
-                    <div class="picturerow">
-                        <%
-                            continue;
-                            }
-                        %>
-                        <div class="imgdisplay">
-                            <img src ="./BildDownload?bildID=<%=bildID%>" style="width:100%">
-                        </div>
-                        <%}
-                        %>
-                    </div>
-                </div>
+        <div class="picturerow">
+        <%
+        for(int i = 0; i<lista.size(); i++){
+        BildDTO dto = lista.get(i);
+        String bildID = dto.getBildID();
+        String kategori = dto.getKategori();
+        %>
+        <div class="imgdisplay">
+        <img src ="./BildDownload?bildID=<%=bildID%>" style="width:100%"> 
+        </div>
+        <%
+        if(i%4 == 0 && i != 0){
+        %>
+        </div>
+        <div class="picturerow">
+        <%
+            continue;
+        }
+        %>
+
+        <%}
+        %>
+        </div>
+
 
             </div>
         </div>

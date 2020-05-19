@@ -30,6 +30,31 @@
         
         <div class="row">
         <div class="column side" style="background-color:white;">
+            
+            <form method="post" name="BildKategoriController" action="BildKategoriController">
+            <button type="submit" name="sokfras" value="dryck">Dryck</button>
+            </form>
+            
+            <form method="post" name="BildKategoriController" action="BildKategoriController">
+            <button type="submit" name="sokfras" value="hundar">Hundar</button>
+            </form>
+            
+            <form method="post" name="BildKategoriController" action="BildKategoriController">
+            <button type="submit" name="sokfras" value="katter">Katter</button>
+            </form>
+            
+            <form method="post" name="BildKategoriController" action="BildKategoriController">
+            <button type="submit" name="sokfras" value="kungen">Kungen</button>
+            </form>
+            
+            <form method="post" name="BildKategoriController" action="BildKategoriController">
+            <button type="submit" name="sokfras" value="natur">Natur</button>
+            </form>
+            
+            <form method="post" name="BildKategoriController" action="BildKategoriController">
+            <button type="submit" name="sokfras" value="sport">Sport</button>
+            </form>
+            
             <h1>kategorier</h1> <br>
             <a  href="#sport">Sport</a> <br> <br>
             <a  href="#sport">Kajakklubben</a><br><br>
@@ -57,12 +82,22 @@
         String kategori = dto.getKategori();
         %>
         <div class="imgdisplay">
-            <img src ="./BildDownload?bildID=<%=bildID%>" style="width:100%"> 
-        </div> 
+        <img src ="./BildDownload?bildID=<%=bildID%>" style="width:100%"> 
+        </div>
+        <%
+        if(i%4 == 0 && i != 0){
+        %>
+        </div>
+        <div class="picturerow">
+        <%
+            continue;
+        }
+        %>
+
         <%}
         %>
-        
         </div>
+
 
         </div>  
         </div>
