@@ -46,14 +46,14 @@
                         <textarea placeholder="Beskrivning av bild här" name="beskrivning" rows ="6" cols="39" ></textarea> 
                         <br><br>
                         <h3 >Taggar</h3>
-                        <select name="Taggar"> 
-                            <option value="Natur">Natur</option>
-                            <option value="Sport">Sport</option>
-                            <option value="Bak">Bak</option>
-                            <option value="Katter">Katter</option>
-                            <option value="Hundar">Hundar</option>
-                        </select>
-                        <input placeholder="sport,natur,kanot"type="text" name="kategori" size="50" /> 
+                        <select name="kategori"> 
+                            <option value="dryck">Dryck</option>
+                            <option value="hundar">Hundar</option>
+                            <option value="katter">Katter</option>
+                            <option value="kungen">Kungen</option>
+                            <option value="natur">Natur</option>
+                            <option value="sport">Sport</option>
+                        </select> 
                         <input type="file" name="foto" size="50" /> <br><br>
                         <input type="submit" value="Ladda Upp">
                         
