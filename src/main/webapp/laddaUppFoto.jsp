@@ -47,12 +47,12 @@
                         <br><br>
                         <h3 >Kategorier</h3>
                         <select name="kategori"> 
-                            <option value="dryck">Dryck</option>
-                            <option value="hundar">Hundar</option>
-                            <option value="katter">Katter</option>
-                            <option value="kungen">Kungen</option>
-                            <option value="natur">Natur</option>
-                            <option value="sport">Sport</option>
+                            <option value="Dryck">Dryck</option>
+                            <option value="Hundar">Hundar</option>
+                            <option value="Katter">Katter</option>
+                            <option value="Kungen">Kungen</option>
+                            <option value="Natur">Natur</option>
+                            <option value="Sport">Sport</option>
                         </select> 
                         <input type="file" name="foto" size="50" /> <br><br>
                         <input type="submit" value="Ladda Upp">
