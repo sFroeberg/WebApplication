@@ -16,6 +16,10 @@
 <body>
     <center>
         <h3><%=request.getAttribute("Message")%></h3>
+        <br>
+        <p><a href="index.html">Till startsidan tryck här</a></p>
+
     </center>
+    
 </body>
 </html>
