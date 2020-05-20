@@ -45,7 +45,7 @@
                         <h4 style="text-align: center;">Skriv en text som beskriver bilden</h4>
                         <textarea placeholder="Beskrivning av bild här" name="beskrivning" rows ="6" cols="39" ></textarea> 
                         <br><br>
-                        <h3 >Taggar</h3>
+                        <h3 >Kategorier</h3>
                         <select name="kategori"> 
                             <option value="dryck">Dryck</option>
                             <option value="hundar">Hundar</option>
