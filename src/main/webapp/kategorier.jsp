@@ -31,7 +31,7 @@
         <div class="row">
             <div class="column side" style="background-color:white;">
 
-                <h1>kategorier</h1> <br>
+                <h1>Kategorier</h1> <br>
                 <form class="kategoriknapp" method="post" name="BildKategoriController" action="BildKategoriController">
                     <button type="submit" name="sokfras" value="dryck">Dryck</button>
 
