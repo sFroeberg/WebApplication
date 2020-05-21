@@ -35,7 +35,7 @@ public class BildDatumController extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String GET_DATA = "SELECT bildID, kategori FROM bild ORDER BY uppladdningsdatum LIMIT 10;";
+        String GET_DATA = "SELECT bildID, kategori FROM bild ORDER BY uppladdningsdatum LIMIT 12;";
         
         Connection con = null;
         PreparedStatement ps = null;
