@@ -49,9 +49,7 @@
             </div
             <div class="column middle" style="background-color:gray;"  >
 
-                <img src="images/123.jpg" alt=""/>
-                <img src="images/2.jpg" alt=""/>
-                <img src="images/Paulo.jpg" alt=""/>
+              
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
                 <%
