@@ -28,8 +28,8 @@
 
         </div>
 
-        <div class="row">
-            <div class="column side" style="background-color:white;">
+        <div id="css-table">
+            <div class="col" >
 
                 <h1>Kategorier</h1> <br>
                 <form class="kategoriknapp" method="post" name="BildKategoriController" action="BildKategoriController">
@@ -47,7 +47,7 @@
                 </form>
 
             </div
-            <div class="column middle" style="background-color:gray;"  >
+            <div class="col"   >
 
               
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -79,7 +79,7 @@
                     <%}
                     %>
                 </div>
-
+                <div class="col"> </div>
             </div>
 
 
