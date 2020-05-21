@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="./CSS/style.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="header">
@@ -28,16 +29,20 @@
                 <li><a href="laddaUppFoto.jsp">Ladda upp foto</a></li>
                 <li><a href="BildDatumController">Nya bilder</a></li>
                 <li><a href="BildKategoriController">Kategorier</a></li>
-                <li><a href="bildSok.jsp">Bildsök</a></li>
+            
             </ul>
 
         </div>
 
         <div class="row">
-            <div class="column side" style="background-color:white;"></div>
-            <div class="column middle" style="background-color:gray;">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+          
+            <div class="column side" ></div>
+            
+            
+            <div class="column middle" >
+                
+ 
+           
                 <%
                   List<BildDTO> lista = (ArrayList<BildDTO>)request.getAttribute("lista");
                 %>
@@ -56,6 +61,7 @@
         if(i%4 == 0 && i != 0){
         %>
         </div>
+        
         <div class="picturerow">
         <%
             continue;
@@ -65,7 +71,7 @@
         <%}
         %>
         </div>
-
+ 
 
             </div>
         </div>
